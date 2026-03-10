@@ -1,11 +1,54 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import { CaseSidebar } from "@/components/investigation/CaseSidebar";
+import { CaseHeader } from "@/components/investigation/CaseHeader";
+import { AgentStatusBar } from "@/components/investigation/AgentStatusBar";
+import { IntelligenceSummary } from "@/components/investigation/IntelligenceSummary";
+import { IssuesList } from "@/components/investigation/IssuesList";
+import { CaseTimeline } from "@/components/investigation/CaseTimeline";
+import { AIChat } from "@/components/investigation/AIChat";
+import { EvidencePanel } from "@/components/investigation/EvidencePanel";
+import { ActionBar } from "@/components/investigation/ActionBar";
 
 const Index = () => {
+  const [activeCase, setActiveCase] = useState("1");
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="flex h-screen bg-background overflow-hidden">
+      {/* Left Panel — Case Sessions */}
+      <CaseSidebar activeCase={activeCase} onSelectCase={setActiveCase} />
+
+      {/* Main Workspace */}
+      <div className="flex-1 flex flex-col min-w-0">
+        {/* Case Header */}
+        <CaseHeader />
+        <AgentStatusBar />
+
+        {/* Content Area */}
+        <div className="flex-1 overflow-hidden flex">
+          {/* Left content: Investigation panels */}
+          <div className="flex-1 overflow-y-auto p-4 space-y-4 min-w-0">
+            <IntelligenceSummary />
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
+              <IssuesList />
+              <CaseTimeline />
+            </div>
+          </div>
+
+          {/* Right panel: AI Chat + Evidence */}
+          <div className="w-96 border-l border-border flex flex-col bg-card">
+            <div className="flex-1 overflow-hidden flex flex-col">
+              <div className="flex-[3] min-h-0">
+                <AIChat />
+              </div>
+              <div className="flex-[2] min-h-0 overflow-y-auto border-t border-border">
+                <EvidencePanel />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Action Bar */}
+        <ActionBar />
       </div>
     </div>
   );
