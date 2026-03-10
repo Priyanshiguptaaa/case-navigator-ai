@@ -47,6 +47,22 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        severity: {
+          critical: "hsl(var(--severity-critical))",
+          high: "hsl(var(--severity-high))",
+          medium: "hsl(var(--severity-medium))",
+          low: "hsl(var(--severity-low))",
+        },
+        sentiment: {
+          negative: "hsl(var(--sentiment-negative))",
+          neutral: "hsl(var(--sentiment-neutral))",
+          positive: "hsl(var(--sentiment-positive))",
+        },
+        agent: {
+          active: "hsl(var(--agent-active))",
+          processing: "hsl(var(--agent-processing))",
+          idle: "hsl(var(--agent-idle))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
