@@ -153,9 +153,9 @@ function generateMockResponse(query: string): ChatMessage {
         {
           heading: "Issue Ranking",
           items: [
-            "🔴 Critical — CIP restriction preventing account transfer (blocking all downstream actions)",
-            "🟠 High — Missing ownership change documentation (required for transfer completion)",
-            "🟡 Medium — Incorrect account coding (already corrected, but caused 2-day delay)",
+            "Critical — CIP restriction preventing account transfer (blocking all downstream actions)",
+            "High — Missing ownership change documentation (required for transfer completion)",
+            "Medium — Incorrect account coding (already corrected, but caused 2-day delay)",
           ],
         },
       ],
