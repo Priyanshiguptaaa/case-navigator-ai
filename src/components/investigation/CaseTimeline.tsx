@@ -11,7 +11,7 @@ const sourceIcon: Record<SourceSystem, React.ReactNode> = {
 
 const sentimentDot: Record<Sentiment, string> = {
   Negative: "bg-severity-critical",
-  Neutral: "bg-muted-foreground",
+  Neutral: "bg-muted-foreground/40",
   Positive: "bg-severity-low",
 };
 
@@ -19,29 +19,28 @@ export function CaseTimeline() {
   return (
     <div className="panel-section">
       <div className="panel-header flex items-center gap-2">
-        <Clock className="w-3.5 h-3.5" />
-        Client Journey Timeline
+        <Clock className="w-4 h-4 text-muted-foreground" />
+        Timeline
       </div>
-      <div className="p-4">
+      <div className="p-5">
         <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-[18px] top-2 bottom-2 w-px bg-border" />
+          <div className="absolute left-[17px] top-3 bottom-3 w-px bg-border" />
 
-          <div className="space-y-4">
+          <div className="space-y-5">
             {timelineEvents.map((event, i) => (
-              <div key={i} className="flex gap-3 relative">
-                <div className="w-9 h-9 rounded-full bg-muted flex items-center justify-center flex-shrink-0 z-10 border border-border">
+              <div key={i} className="flex gap-3.5 relative">
+                <div className="w-[34px] h-[34px] rounded-full bg-muted flex items-center justify-center flex-shrink-0 z-10 text-muted-foreground">
                   {sourceIcon[event.type]}
                 </div>
-                <div className="flex-1 min-w-0 pt-1">
+                <div className="flex-1 min-w-0 pt-0.5">
                   <div className="flex items-center gap-2 mb-0.5">
-                    <span className="text-[10px] font-mono text-muted-foreground">{event.date}</span>
-                    <span className="text-[10px] font-medium text-muted-foreground">{event.type}</span>
+                    <span className="text-[11px] font-medium text-muted-foreground">{event.date}</span>
+                    <span className="text-[11px] text-muted-foreground/60">{event.type}</span>
                     {event.sentiment && (
                       <span className={`w-1.5 h-1.5 rounded-full ${sentimentDot[event.sentiment]}`} />
                     )}
                   </div>
-                  <p className="text-xs text-foreground leading-relaxed">{event.summary}</p>
+                  <p className="text-[13px] text-foreground leading-relaxed">{event.summary}</p>
                 </div>
               </div>
             ))}

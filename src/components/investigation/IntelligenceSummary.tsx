@@ -13,16 +13,16 @@ export function IntelligenceSummary() {
   return (
     <div className="panel-section">
       <div className="panel-header flex items-center gap-2">
-        <Brain className="w-3.5 h-3.5" />
-        Case Intelligence Summary
+        <Brain className="w-4 h-4 text-muted-foreground" />
+        Case Intelligence
       </div>
-      <div className="p-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
+      <div className="p-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
         {intelligenceInsights.map((insight) => (
           <div key={insight.label} className="investigation-card flex gap-3">
             <div className="mt-0.5 flex-shrink-0">{iconMap[insight.type]}</div>
             <div className="min-w-0">
-              <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-1">{insight.label}</p>
-              <p className="text-xs text-foreground leading-relaxed">{insight.value}</p>
+              <p className="text-[11px] font-medium text-muted-foreground mb-1">{insight.label}</p>
+              <p className="text-[13px] text-foreground leading-relaxed">{insight.value}</p>
             </div>
           </div>
         ))}

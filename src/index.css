@@ -2,101 +2,103 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 220 20% 97%;
-    --foreground: 220 30% 12%;
+    --background: 0 0% 98%;
+    --foreground: 0 0% 9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 30% 12%;
+    --card-foreground: 0 0% 9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 12%;
+    --popover-foreground: 0 0% 9%;
 
-    --primary: 220 60% 35%;
+    --primary: 215 28% 17%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 92%;
-    --secondary-foreground: 220 30% 20%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 0 0% 9%;
 
-    --muted: 220 15% 94%;
-    --muted-foreground: 220 10% 50%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 220 20% 88%;
-    --accent-foreground: 220 30% 15%;
+    --accent: 220 14% 94%;
+    --accent-foreground: 0 0% 9%;
 
-    --destructive: 0 72% 51%;
+    --destructive: 0 68% 52%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 90%;
-    --input: 220 15% 90%;
-    --ring: 220 60% 35%;
+    --border: 0 0% 91%;
+    --input: 0 0% 91%;
+    --ring: 215 28% 17%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    /* Severity colors */
-    --severity-critical: 0 84% 60%;
-    --severity-high: 25 95% 53%;
-    --severity-medium: 45 93% 47%;
-    --severity-low: 142 71% 45%;
+    /* Severity — desaturated, muted tones */
+    --severity-critical: 0 60% 55%;
+    --severity-high: 30 70% 52%;
+    --severity-medium: 42 75% 50%;
+    --severity-low: 152 50% 45%;
 
     /* Sentiment */
-    --sentiment-negative: 0 84% 60%;
-    --sentiment-neutral: 220 10% 50%;
-    --sentiment-positive: 142 71% 45%;
+    --sentiment-negative: 0 60% 55%;
+    --sentiment-neutral: 0 0% 55%;
+    --sentiment-positive: 152 50% 45%;
 
     /* Investigation panel */
     --panel-bg: 0 0% 100%;
-    --panel-header: 220 25% 96%;
-    --panel-border: 220 15% 90%;
+    --panel-header: 220 14% 97%;
+    --panel-border: 0 0% 91%;
 
     /* Sidebar */
-    --sidebar-background: 222 30% 14%;
-    --sidebar-foreground: 220 15% 80%;
-    --sidebar-primary: 215 80% 60%;
+    --sidebar-background: 220 16% 12%;
+    --sidebar-foreground: 220 10% 70%;
+    --sidebar-primary: 215 60% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 222 25% 20%;
-    --sidebar-accent-foreground: 220 15% 90%;
-    --sidebar-border: 222 20% 22%;
-    --sidebar-ring: 215 80% 60%;
-    --sidebar-muted: 222 20% 30%;
+    --sidebar-accent: 220 14% 18%;
+    --sidebar-accent-foreground: 220 10% 92%;
+    --sidebar-border: 220 12% 20%;
+    --sidebar-ring: 215 60% 60%;
+    --sidebar-muted: 220 10% 40%;
 
     /* Agent indicators */
-    --agent-active: 142 71% 45%;
-    --agent-processing: 215 80% 60%;
-    --agent-idle: 220 10% 50%;
+    --agent-active: 152 50% 45%;
+    --agent-processing: 215 60% 60%;
+    --agent-idle: 0 0% 60%;
 
     /* Chat */
-    --chat-user-bg: 220 60% 35%;
+    --chat-user-bg: 215 28% 17%;
     --chat-user-fg: 0 0% 100%;
-    --chat-assistant-bg: 220 15% 95%;
-    --chat-assistant-fg: 220 30% 12%;
+    --chat-assistant-bg: 220 14% 96%;
+    --chat-assistant-fg: 0 0% 9%;
 
-    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   .dark {
-    --background: 222 30% 8%;
-    --foreground: 220 15% 90%;
-    --card: 222 25% 12%;
-    --card-foreground: 220 15% 90%;
-    --popover: 222 25% 12%;
-    --popover-foreground: 220 15% 90%;
-    --primary: 215 80% 60%;
+    --background: 220 16% 6%;
+    --foreground: 220 10% 92%;
+    --card: 220 14% 10%;
+    --card-foreground: 220 10% 92%;
+    --popover: 220 14% 10%;
+    --popover-foreground: 220 10% 92%;
+    --primary: 215 60% 60%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 222 20% 18%;
-    --secondary-foreground: 220 15% 85%;
-    --muted: 222 20% 16%;
-    --muted-foreground: 220 10% 55%;
-    --accent: 222 20% 20%;
-    --accent-foreground: 220 15% 90%;
-    --destructive: 0 62.8% 30.6%;
+    --secondary: 220 14% 14%;
+    --secondary-foreground: 220 10% 85%;
+    --muted: 220 14% 12%;
+    --muted-foreground: 220 6% 50%;
+    --accent: 220 14% 16%;
+    --accent-foreground: 220 10% 92%;
+    --destructive: 0 55% 40%;
     --destructive-foreground: 0 0% 100%;
-    --border: 222 20% 20%;
-    --input: 222 20% 20%;
-    --ring: 215 80% 60%;
+    --border: 220 12% 18%;
+    --input: 220 12% 18%;
+    --ring: 215 60% 60%;
   }
 }
 
@@ -107,43 +109,45 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
+    letter-spacing: -0.011em;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
     font-weight: 600;
+    letter-spacing: -0.02em;
   }
 }
 
 @layer components {
   .severity-critical {
-    @apply bg-[hsl(var(--severity-critical)/0.12)] text-[hsl(var(--severity-critical))] border-[hsl(var(--severity-critical)/0.3)];
+    @apply bg-[hsl(var(--severity-critical)/0.08)] text-[hsl(var(--severity-critical))] border-[hsl(var(--severity-critical)/0.15)];
   }
   .severity-high {
-    @apply bg-[hsl(var(--severity-high)/0.12)] text-[hsl(var(--severity-high))] border-[hsl(var(--severity-high)/0.3)];
+    @apply bg-[hsl(var(--severity-high)/0.08)] text-[hsl(var(--severity-high))] border-[hsl(var(--severity-high)/0.15)];
   }
   .severity-medium {
-    @apply bg-[hsl(var(--severity-medium)/0.12)] text-[hsl(var(--severity-medium))] border-[hsl(var(--severity-medium)/0.3)];
+    @apply bg-[hsl(var(--severity-medium)/0.08)] text-[hsl(var(--severity-medium))] border-[hsl(var(--severity-medium)/0.15)];
   }
   .severity-low {
-    @apply bg-[hsl(var(--severity-low)/0.12)] text-[hsl(var(--severity-low))] border-[hsl(var(--severity-low)/0.3)];
+    @apply bg-[hsl(var(--severity-low)/0.08)] text-[hsl(var(--severity-low))] border-[hsl(var(--severity-low)/0.15)];
   }
 
   .investigation-card {
-    @apply bg-card rounded-lg border border-border p-4 shadow-sm;
+    @apply bg-card rounded-xl border border-border p-4;
   }
 
   .panel-section {
-    @apply bg-card rounded-lg border border-border overflow-hidden;
+    @apply bg-card rounded-xl border border-border overflow-hidden;
   }
 
   .panel-header {
-    @apply px-4 py-3 bg-[hsl(var(--panel-header))] border-b border-border font-semibold text-sm tracking-wide uppercase text-muted-foreground;
+    @apply px-5 py-3 border-b border-border font-medium text-[13px] text-foreground;
   }
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar — minimal */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -156,5 +160,5 @@
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--muted-foreground));
+  background: hsl(var(--muted-foreground) / 0.3);
 }

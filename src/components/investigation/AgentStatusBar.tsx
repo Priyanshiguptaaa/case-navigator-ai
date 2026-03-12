@@ -9,13 +9,13 @@ const statusIcon: Record<AgentStatus["status"], React.ReactNode> = {
 
 export function AgentStatusBar() {
   return (
-    <div className="flex items-center gap-4 px-6 py-2 bg-muted/50 border-b border-border">
-      <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Forensic Agents</span>
-      <div className="flex items-center gap-3">
+    <div className="flex items-center gap-5 px-6 py-2 bg-muted/40 border-b border-border">
+      <span className="text-[11px] font-medium text-muted-foreground">Agents</span>
+      <div className="flex items-center gap-4">
         {agentStatuses.map((agent) => (
           <div key={agent.name} className="flex items-center gap-1.5">
             {statusIcon[agent.status]}
-            <span className="text-[10px] text-muted-foreground">{agent.name}</span>
+            <span className="text-[11px] text-muted-foreground">{agent.name}</span>
           </div>
         ))}
       </div>

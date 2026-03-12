@@ -19,14 +19,13 @@ const Index = () => {
 
       {/* Main Workspace */}
       <div className="flex-1 flex flex-col min-w-0">
-        {/* Case Header */}
         <CaseHeader />
         <AgentStatusBar />
 
         {/* Content Area */}
         <div className="flex-1 overflow-hidden flex">
           {/* Left content: Investigation panels */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4 min-w-0">
+          <div className="flex-1 overflow-y-auto p-5 space-y-4 min-w-0">
             <IntelligenceSummary />
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
               <IssuesList />
@@ -35,7 +34,7 @@ const Index = () => {
           </div>
 
           {/* Right panel: AI Chat + Evidence */}
-          <div className="w-96 border-l border-border flex flex-col bg-card">
+          <div className="w-[400px] border-l border-border flex flex-col bg-card">
             <div className="flex-1 overflow-hidden flex flex-col">
               <div className="flex-[3] min-h-0">
                 <AIChat />
@@ -47,7 +46,6 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Action Bar */}
         <ActionBar />
       </div>
     </div>
