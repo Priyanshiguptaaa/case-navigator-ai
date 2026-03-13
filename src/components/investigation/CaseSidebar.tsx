@@ -1,4 +1,4 @@
-import { Pin, Plus, Search, Shield } from "lucide-react";
+import { Pin, Plus, Search, Shield, Users, BarChart3 } from "lucide-react";
 import { caseSessions, type CaseSession, type Severity } from "@/data/mockCaseData";
 import { useState } from "react";
 
@@ -9,10 +9,14 @@ const severityDot: Record<Severity, string> = {
   Low: "bg-severity-low",
 };
 
+export type ViewMode = "client" | "exec";
+
 interface CaseSidebarProps {
   activeCase: string | null;
   onSelectCase: (id: string) => void;
   onNewInvestigation: (clientId: string) => void;
+  viewMode: ViewMode;
+  onViewModeChange: (mode: ViewMode) => void;
 }
 
 export function CaseSidebar({ activeCase, onSelectCase, onNewInvestigation }: CaseSidebarProps) {
