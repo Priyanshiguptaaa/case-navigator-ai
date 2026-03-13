@@ -163,6 +163,9 @@ export function CaseSidebar({ activeCase, onSelectCase, onNewInvestigation, view
           </div>
         </>
       )}
+    </div>
+  );
+}
 
 function CaseItem({ item, active, onClick }: { item: CaseSession; active: boolean; onClick: () => void }) {
   return (
