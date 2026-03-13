@@ -19,7 +19,7 @@ interface CaseSidebarProps {
   onViewModeChange: (mode: ViewMode) => void;
 }
 
-export function CaseSidebar({ activeCase, onSelectCase, onNewInvestigation }: CaseSidebarProps) {
+export function CaseSidebar({ activeCase, onSelectCase, onNewInvestigation, viewMode, onViewModeChange }: CaseSidebarProps) {
   const [search, setSearch] = useState("");
   const [showNewDialog, setShowNewDialog] = useState(false);
   const [newClientId, setNewClientId] = useState("");
