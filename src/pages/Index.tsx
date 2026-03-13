@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CaseSidebar } from "@/components/investigation/CaseSidebar";
+import { CaseSidebar, type ViewMode } from "@/components/investigation/CaseSidebar";
 import { CaseHeader } from "@/components/investigation/CaseHeader";
 import { AgentStatusBar } from "@/components/investigation/AgentStatusBar";
 import { IntelligenceSummary } from "@/components/investigation/IntelligenceSummary";
@@ -9,12 +9,13 @@ import { AIChat } from "@/components/investigation/AIChat";
 import { EvidencePanel } from "@/components/investigation/EvidencePanel";
 import { ActionBar } from "@/components/investigation/ActionBar";
 import { EmptyWorkspace } from "@/components/investigation/EmptyWorkspace";
+import { ExecChat } from "@/components/investigation/ExecChat";
 
 const Index = () => {
   const [activeCase, setActiveCase] = useState<string | null>(null);
+  const [viewMode, setViewMode] = useState<ViewMode>("client");
 
   const handleNewInvestigation = (clientId: string) => {
-    // Simulate loading a case — in production this would fetch from backend
     setActiveCase("new-" + clientId);
   };
 
@@ -30,10 +31,14 @@ const Index = () => {
         activeCase={activeCase}
         onSelectCase={handleSelectCase}
         onNewInvestigation={handleNewInvestigation}
+        viewMode={viewMode}
+        onViewModeChange={setViewMode}
       />
 
       <div className="flex-1 flex flex-col min-w-0">
-        {hasActiveCase ? (
+        {viewMode === "exec" ? (
+          <ExecChat />
+        ) : hasActiveCase ? (
           <>
             <CaseHeader />
             <AgentStatusBar />
