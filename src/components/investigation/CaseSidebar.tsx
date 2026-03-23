@@ -50,7 +50,7 @@ export function CaseSidebar({ activeCase, onSelectCase, onNewInvestigation, view
           <div className="w-8 h-8 rounded-lg bg-[hsl(var(--sidebar-primary)/0.15)] flex items-center justify-center">
             <Shield className="w-4 h-4 text-[hsl(var(--sidebar-primary))]" />
           </div>
-          <span className="font-semibold text-[13px] text-[hsl(var(--sidebar-accent-foreground))]">Investigations</span>
+          <span className="font-semibold text-[13px] text-[hsl(var(--sidebar-accent-foreground))]">Client FRS</span>
         </div>
 
         {/* View Mode Toggle */}
@@ -64,7 +64,7 @@ export function CaseSidebar({ activeCase, onSelectCase, onNewInvestigation, view
             }`}
           >
             <Users className="w-3.5 h-3.5" />
-            Client
+            Exploratory
           </button>
           <button
             onClick={() => onViewModeChange("exec")}
@@ -75,7 +75,7 @@ export function CaseSidebar({ activeCase, onSelectCase, onNewInvestigation, view
             }`}
           >
             <BarChart3 className="w-3.5 h-3.5" />
-            Executive
+            Book of Business
           </button>
         </div>
 
@@ -177,16 +177,13 @@ function CaseItem({ item, active, onClick }: { item: CaseSession; active: boolea
           : "hover:bg-[hsl(var(--sidebar-accent)/0.5)] text-[hsl(var(--sidebar-foreground))]"
       }`}
     >
-      <div className="flex items-start justify-between gap-2">
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2">
-            <span className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${severityDot[item.severity]}`} />
-            <span className="text-[13px] font-medium truncate">Client {item.clientId}</span>
-            {item.pinned && <Pin className="w-3 h-3 flex-shrink-0 text-[hsl(var(--sidebar-muted))]" />}
-          </div>
-          <p className="text-[11px] mt-0.5 ml-3.5 truncate text-[hsl(var(--sidebar-muted))]">{item.caseType}</p>
+      <div className="flex items-center justify-between gap-2">
+        <div className="flex items-center gap-2 min-w-0">
+          <span className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${severityDot[item.severity]}`} />
+          <span className="text-[13px] font-medium truncate">Client {item.clientId}</span>
+          {item.pinned && <Pin className="w-3 h-3 flex-shrink-0 text-[hsl(var(--sidebar-muted))]" />}
         </div>
-        <span className="text-[10px] text-[hsl(var(--sidebar-muted))] flex-shrink-0 mt-0.5">{item.lastUpdated}</span>
+        <span className="text-[10px] text-[hsl(var(--sidebar-muted))] flex-shrink-0">{item.lastUpdated}</span>
       </div>
     </button>
   );
