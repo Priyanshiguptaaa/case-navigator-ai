@@ -29,16 +29,12 @@ export function CaseHeader() {
     <div className="bg-card border-b border-border px-6 py-5">
       <div className="flex items-center justify-between flex-wrap gap-4">
         {/* Left: ID and status */}
-        <div className="flex items-center gap-4">
+         <div className="flex items-center gap-4">
           <div>
             <h1 className="text-[17px] font-semibold text-foreground tracking-tight">Client {c.clientId}</h1>
-            <span className="text-[12px] text-muted-foreground font-mono tracking-wide">{c.caseId}</span>
           </div>
           <div className="w-px h-8 bg-border" />
           <div className="flex items-center gap-2">
-            <span className={`text-[11px] font-medium px-2.5 py-1 rounded-md border ${statusStyle[c.status]}`}>
-              {c.status}
-            </span>
             <span className={`text-[11px] font-medium px-2.5 py-1 rounded-md border ${severityStyle[c.severity]}`}>
               {c.severity}
             </span>
