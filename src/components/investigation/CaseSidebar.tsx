@@ -43,7 +43,7 @@ export function CaseSidebar({ activeCase, onSelectCase, onNewInvestigation, view
   };
 
   return (
-    <div className="w-[280px] h-full flex flex-col bg-[hsl(var(--sidebar-background))] text-[hsl(var(--sidebar-foreground))]">
+    <div className="w-[320px] h-full flex flex-col bg-[hsl(var(--sidebar-background))] text-[hsl(var(--sidebar-foreground))]">
       {/* Header */}
       <div className="px-5 pt-6 pb-4">
         <div className="flex items-center gap-2.5 mb-4">
