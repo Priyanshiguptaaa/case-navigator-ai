@@ -78,6 +78,9 @@ export function CaseSidebar({ activeCase, onSelectCase, onNewInvestigation, view
             Book of Business
           </button>
         </div>
+      </div>
+
+        </div>
 
         {viewMode === "client" && (
           <div className="relative">
