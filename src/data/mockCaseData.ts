@@ -29,7 +29,7 @@ export interface CaseDetail {
 export interface IntelligenceInsight {
   label: string;
   value: string;
-  type: "root_cause" | "sentiment" | "friction" | "action" | "issues";
+  type: "root_cause" | "sentiment_trajectory" | "current_sentiment" | "recent_friction" | "upcoming_appointments" | "issues";
 }
 
 export interface CaseIssue {
@@ -83,9 +83,10 @@ export const activeCaseDetail: CaseDetail = {
 
 export const intelligenceInsights: IntelligenceInsight[] = [
   { label: "Root Cause", value: "CIP restriction preventing account transfer due to unverified identity documentation", type: "root_cause" },
-  { label: "Client Sentiment", value: "Negative — escalating frustration across last 3 interactions", type: "sentiment" },
-  { label: "Primary Friction", value: "Document requirements unclear to client; repeated NIGO submissions", type: "friction" },
-  { label: "Recommended Action", value: "Client must upload government-issued photo ID to remove CIP restriction. Ops should pre-validate format before resubmission.", type: "action" },
+  { label: "Sentiment Trajectory", value: "Escalating frustration across last 3 interactions — trending from Neutral to Negative", type: "sentiment_trajectory" },
+  { label: "Current Sentiment", value: "Negative", type: "current_sentiment" },
+  { label: "Recent Friction", value: "Document requirements unclear to client; repeated NIGO submissions", type: "recent_friction" },
+  { label: "Upcoming Appointments", value: "Phone Call scheduled — Jul 18, 2024 at 2:00 PM ET", type: "upcoming_appointments" },
   { label: "Open Issues", value: "3 unresolved issues identified", type: "issues" },
 ];
 

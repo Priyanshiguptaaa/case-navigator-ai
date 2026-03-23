@@ -1,12 +1,10 @@
 import { useState } from "react";
 import { CaseSidebar, type ViewMode } from "@/components/investigation/CaseSidebar";
 import { CaseHeader } from "@/components/investigation/CaseHeader";
-import { AgentStatusBar } from "@/components/investigation/AgentStatusBar";
 import { IntelligenceSummary } from "@/components/investigation/IntelligenceSummary";
 import { IssuesList } from "@/components/investigation/IssuesList";
 import { CaseTimeline } from "@/components/investigation/CaseTimeline";
 import { AIChat } from "@/components/investigation/AIChat";
-import { EvidencePanel } from "@/components/investigation/EvidencePanel";
 import { ActionBar } from "@/components/investigation/ActionBar";
 import { EmptyWorkspace } from "@/components/investigation/EmptyWorkspace";
 import { ExecChat } from "@/components/investigation/ExecChat";
@@ -41,7 +39,6 @@ const Index = () => {
         ) : hasActiveCase ? (
           <>
             <CaseHeader />
-            <AgentStatusBar />
 
             <div className="flex-1 overflow-hidden flex">
               <div className="flex-1 overflow-y-auto p-5 space-y-4 min-w-0">
@@ -53,14 +50,7 @@ const Index = () => {
               </div>
 
               <div className="w-[400px] border-l border-border flex flex-col bg-card">
-                <div className="flex-1 overflow-hidden flex flex-col">
-                  <div className="flex-[3] min-h-0">
-                    <AIChat />
-                  </div>
-                  <div className="flex-[2] min-h-0 overflow-y-auto border-t border-border">
-                    <EvidencePanel />
-                  </div>
-                </div>
+                <AIChat />
               </div>
             </div>
 
