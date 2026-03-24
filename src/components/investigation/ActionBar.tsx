@@ -1,4 +1,4 @@
-import { FileEdit, FileText, AlertOctagon, Download, Phone, RotateCcw } from "lucide-react";
+import { FileEdit, FileText, AlertOctagon, Download, Phone } from "lucide-react";
 
 const actions = [
   { label: "Draft Client Update", icon: FileEdit, variant: "primary" as const },
