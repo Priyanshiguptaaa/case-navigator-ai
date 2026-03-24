@@ -35,7 +35,7 @@ export function AIChat() {
     <div className="panel-section flex flex-col h-full border-0 rounded-none">
       <div className="panel-header flex items-center gap-2">
         <Bot className="w-4 h-4 text-muted-foreground" />
-        Assistant
+        Frontline Investigation Assistant
       </div>
 
       {/* Messages */}
