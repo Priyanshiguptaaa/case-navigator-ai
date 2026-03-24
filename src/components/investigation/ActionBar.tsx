@@ -5,7 +5,7 @@ const actions = [
   { label: "Internal Case Note", icon: FileText, variant: "secondary" as const },
   { label: "Request Callback", icon: Phone, variant: "secondary" as const },
   { label: "Escalate Case", icon: AlertOctagon, variant: "destructive" as const },
-  { label: "Reopen Review", icon: RotateCcw, variant: "secondary" as const },
+  
   { label: "Export Summary", icon: Download, variant: "secondary" as const },
 ];
 

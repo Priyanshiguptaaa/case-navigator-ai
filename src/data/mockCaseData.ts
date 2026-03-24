@@ -82,12 +82,12 @@ export const activeCaseDetail: CaseDetail = {
 };
 
 export const intelligenceInsights: IntelligenceInsight[] = [
-  { label: "Root Cause", value: "CIP restriction preventing account transfer due to unverified identity documentation", type: "root_cause" },
-  { label: "Sentiment Trajectory", value: "Escalating frustration across last 3 interactions — trending from Neutral to Negative", type: "sentiment_trajectory" },
-  { label: "Current Sentiment", value: "Negative", type: "current_sentiment" },
-  { label: "Recent Friction", value: "Document requirements unclear to client; repeated NIGO submissions", type: "recent_friction" },
   { label: "Upcoming Appointments", value: "Phone Call scheduled — Jul 18, 2024 at 2:00 PM ET", type: "upcoming_appointments" },
+  { label: "Current Sentiment", value: "Negative", type: "current_sentiment" },
+  { label: "Sentiment Trajectory", value: "Escalating frustration across last 3 interactions — trending from Neutral to Negative", type: "sentiment_trajectory" },
   { label: "Open Issues", value: "3 unresolved issues identified", type: "issues" },
+  { label: "Recent Friction", value: "Document requirements unclear to client; repeated NIGO submissions", type: "recent_friction" },
+  { label: "Root Cause", value: "CIP restriction preventing account transfer due to unverified identity documentation", type: "root_cause" },
 ];
 
 export const caseIssues: CaseIssue[] = [
